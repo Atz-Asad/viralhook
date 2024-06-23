@@ -1,0 +1,135 @@
+
+/*
+************
+*************************
+dark css
+********************************
+******************************************/
+[data-bs-theme=dark] {
+    .logo-light{
+        display: block;
+    }
+    .logo-dark {
+        display: none;
+    }
+    .madia-card {
+        border: 1px solid #191633;
+        transition: all 0.3s ease-in-out;
+        background: #100E24;
+        .madia-card-desc{
+            color: var(--Colors-Neutrals-05);
+        }
+    }
+    .card {
+        background: transparent;
+    }
+    .play-btn{
+        color: var(--bs-white);
+    }
+    // .carrent-date-btn-2 svg path{
+    //     fill: var(--bs-white);
+    // }
+    .header-section .header__top-2 .header-top-area-2 .subcribe-btn{
+        &:hover{
+            color: var(--bs-white);
+        }
+    }
+    .header-section .subcribe-btn-2{
+        color: var(--bs-white);
+        &:hover{
+            color: var(--bs-body-text-color);
+            svg path{
+                fill:var(--bs-body-text-color);
+            }
+        }
+        svg path{
+            fill:var(--bs-white);
+            transition: all 0.4s ease;
+        }
+    }
+    .header_main.fixed {
+        box-shadow: 0px 10px 10px 0px rgba(57, 59, 64, 0.16), 0px 20px 25px -5px rgba(6, 25, 56, 0.1);
+    }
+    .category-section-btn-2 {
+        background: var(--bs-heading-color);
+        color: var(--bs-body-text-color);
+        &:hover{
+            color: var(--bs-white);
+        }
+    }
+    .about-page-content{
+        .description{
+            color: var(--bs-body-coor);
+        }
+    }
+    .to-be-fixed.fixed {
+        .menu-wrapper-2 {
+            border-bottom: 1px solid var(--bs-body-text-color);
+        }
+    }
+    .article-socials .twitter {
+        background: #E02A2F;
+    }
+    .downloadapp-area-5{
+        background: var(--bs-body-bg);
+    }
+    .weather-btn svg {
+        fill: transparent;
+    }
+    
+    .catagory-bg {
+        background: #131122;
+        background: var(--Colors-Neutrals-07);
+    }
+    .downloadapp-area {
+        background: rgb(16, 14, 36);
+    }
+    .quote {
+        background: #131122;
+    }
+    
+    .sidebar-socials{
+        ul{
+            justify-content: flex-start;
+            a{
+                i{
+                    color: var(--Colors-Neutrals-05);
+                    &:hover{
+                        color: var(--bs-primary);
+                    }
+                }
+                .fa-facebook-f {
+                    background: var(--Colors-Neutrals-05);
+                    color: var(--bs-body-bg);
+                    &:hover{
+                        background: #1877F2;
+                        color: var(--bs-white);
+                    }
+                }
+                .fa-linkedin-in{
+                    background: var(--Colors-Neutrals-05);
+                    color: var(--bs-body-bg);
+                    &:hover{
+                        background: #1565c0;
+                        color: var(--bs-white);
+                    }
+                }
+                .fa-twitter{
+                    color: var(--Colors-Neutrals-05);
+                    &:hover{
+                        color: var(--bs-primary);
+                    }
+                    }
+                .fa-play{
+                    background: var(--Colors-Neutrals-05);
+                    color: var(--bs-body-bg);
+                    &:hover{
+                        color: var(--bs-white);
+                        background: red;
+                    }
+                }
+                
+            }
+        }
+    }
+}

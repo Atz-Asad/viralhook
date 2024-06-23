@@ -1,0 +1,234 @@
+
+@use '../abstracts/variables' as *;
+
+
+/*
+************
+*************************
+breakingnews css
+********************************
+******************************************/
+
+.breaking-news-section{
+    padding: 120px 0;
+    @media #{$lg} {
+        padding: 60px 0;
+    }
+    @media #{$md} {
+        padding: 40px 0;
+    }
+    @media #{$sm} {
+        padding: 20px 0;
+    }
+    .breaking-news-slider {
+        overflow: hidden;
+        .breaking-news-card-title {
+            font-family: var(--font-play);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: -0.192px;
+            margin-bottom: 20px;
+            @media #{$xl} {
+                font-size: 16px;
+            }
+            
+        }
+    }
+    
+    .breaking-news{   
+        &-heading{
+            display: flex;
+            justify-content: space-between;
+        } 
+        &-slidebtn{
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            span{
+                background:var(--Colors-Neutrals-06);
+                height: 40px;
+                width: 1px;
+                display: inline-block;
+            }
+            .news-slidebtn{
+                background: var(--bs-body-text-color);
+                display: block;
+                cursor: pointer;
+                font-size: 14px;
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 40px;
+                border: 1px solid var(--Colors-Neutrals-06);
+                transition: all 0.4s ease;
+                &:hover{
+                    background: var(--bs-primary);
+                    color: var(--bs-white);
+                    
+                }
+            }
+            .breaking-news-button-prev{
+                border-right: none;
+                border-radius: 9px 0 0px 9px;
+                background: var(--bs-white);
+                color: var(--Colors-Neutrals-02);
+            }
+            .breaking-news-button-next{
+                border-left: none;
+                border-radius: 0px 9px 9px 0px;
+                background: var(--bs-white);
+                color: var(--Colors-Neutrals-02);
+            }
+        }
+    }
+}
+
+.breaking-news-card {
+    display: flex;
+    gap: 10px;
+    
+    &:hover .breaking-news-playbtn{
+        background: var(--bs-primary);
+    }
+    &:hover .breaking-news-card-thumb img{
+        transform: scale(1.1);
+        border-radius: 8px;
+    }
+    &:hover .breaking-news-card-title a{
+        background-size: 100% 2px;
+        color: var(--bs-primary);
+    }
+    &:hover .breaking-news-card-title-2 a{
+        background-size: 100% 2px;
+        color: var(--bs-secondary-02);
+    }
+    &-thumb{
+        height: 100px;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 150px;
+        flex: 0 0 150px;
+        @media #{$sm} {
+            flex: 0 0 120px;
+            width: 120px;
+        }
+        a{
+            position: relative;
+            display: inline-block;
+            border-radius: 8px;
+            &::after{
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                background: var(--img-bottom-effect-1);
+            }
+
+            .breaking-news-playbtn{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+                font-size: 20px;
+                transform: translate(-50%,-50%);
+            }
+        }
+        img{
+            height: 100px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+        }
+    }
+    &-title {
+        font-family: var(--font-play);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.192px;
+        margin-bottom: 20px;
+        @media #{$xl} {
+            font-size: 12px;
+        }
+        a{
+            color: var(--bs-title-color);
+            text-decoration: none;
+            background: linear-gradient(to right, var(--bs-primary) 0%, var(--bs-primary)  100%);
+            background-position-x: 0%;
+            background-position-y: 0%;
+            background-size: auto;
+            background-size: 0px 2px;
+            background-repeat: no-repeat;
+            background-position: left 100%;
+            transition: all 0.3s ease;
+        }
+    }
+    &-title-2{
+        a{
+            color: var(--bs-heading-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: linear-gradient(to right, var(--bs-secondary-02) 0%, var(--bs-secondary-02)  100%);
+            background-position-x: 0%;
+            background-position-y: 0%;
+            background-size: auto;
+            background-size: 0px 2px;
+            background-repeat: no-repeat;
+            background-position: left 100%;
+            transition: all 0.3s ease;
+            
+        }
+    }
+    &-time{
+        color: var(--bs-body-color);
+        font-family: var(--font-play);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.14px;
+        i{
+            margin-right: 5px;
+        }
+    }
+}
+
+/*
+************
+editorpik-section
+*********************/
+.editorpik-section{
+    padding: 120px 0;
+    @media #{$lg} {
+        padding: 60px 0;
+    }
+    @media #{$md} {
+        padding: 40px 0;
+    }
+    @media #{$sm} {
+        padding: 20px 0;
+    }
+}
+
+
+// Sidebar css
+
+.sidebar-gallery{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    .sidebar-gallery-iamge{
+        width: 130px;
+        height: auto;
+        img{
+            width: 100%;
+        }
+    }
+}
